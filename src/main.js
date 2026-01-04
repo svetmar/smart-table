@@ -36,8 +36,8 @@ function collectState() {
  * @param {HTMLButtonElement?} action
  */
 async function render(action) {
-  let state = collectState(); // состояние полей из таблицы
-  let query = {};
+  const state = collectState(); // состояние полей из таблицы
+  const query = {};
   // @todo: использование
   query = applySearching(query, state, action); // result заменяем на query
   query = applyFiltering(query, state, action); // result заменяем на query
