@@ -37,7 +37,7 @@ function collectState() {
  */
 async function render(action) {
   const state = collectState(); // состояние полей из таблицы
-  const query = {};
+  let query = {};//query оставила let, если меняю на const - в консоле ошибка о перезаписи костанты в строке 42
   // @todo: использование
   query = applySearching(query, state, action); // result заменяем на query
   query = applyFiltering(query, state, action); // result заменяем на query
